@@ -5,9 +5,9 @@ import com.emarte.regurgitator.core.Log;
 import java.util.*;
 
 public class NamespaceLoader {
-	public static Map<String, String> loadNamespaces(String attribute, Log log) {
+	public static Map<String, String> loadNamespaces(String string, Log log) {
 		Map<String, String> namespaceMap = new HashMap<String,  String>();
-		String[] parts = attribute.split(",");
+		String[] parts = string.split(",");
 
 		for(String part: parts) {
 			String prefix = part.substring(0, part.indexOf("="));
