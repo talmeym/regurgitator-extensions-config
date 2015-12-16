@@ -23,6 +23,6 @@ public abstract class FreemarkerBuilderLoader {
 
 		ContextLocation location = source != null ? new ContextLocation(source) : null;
 		log.debug("Loaded freemarker builder");
-		return new FreemarkerBuilder(location, value);
+		return new FreemarkerBuilder(new ValueSource(location, value));
 	}
 }

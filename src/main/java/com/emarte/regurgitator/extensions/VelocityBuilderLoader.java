@@ -23,6 +23,6 @@ public abstract class VelocityBuilderLoader {
 
 		ContextLocation location = source != null ? new ContextLocation(source) : null;
 		log.debug("Loaded velocity builder");
-		return new VelocityBuilder(location, value);
+		return new VelocityBuilder(new ValueSource(location, value));
 	}
 }
