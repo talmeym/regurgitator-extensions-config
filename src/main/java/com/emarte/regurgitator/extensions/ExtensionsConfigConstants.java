@@ -7,4 +7,5 @@ public interface ExtensionsConfigConstants {
 	public static final String NAMESPACE_PREFIX = "prefix";
 	public static final String NAMESPACE_URI = "uri";
 	public static final String JSONPATH = "json-path";
+	public static final String ALL_CONTEXTS = "all-contexts";
 }

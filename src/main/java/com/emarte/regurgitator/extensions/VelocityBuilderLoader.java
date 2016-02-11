@@ -3,7 +3,7 @@ package com.emarte.regurgitator.extensions;
 import com.emarte.regurgitator.core.*;
 
 public abstract class VelocityBuilderLoader {
-	protected ValueBuilder buildVelocityValueBuilder(String source, String value, String file, Log log) throws RegurgitatorException {
+	protected ValueBuilder buildVelocityValueBuilder(String source, String value, String file, boolean allContexts, Log log) throws RegurgitatorException {
 		int numberSet = 0;
 		numberSet = source != null ? ++numberSet : numberSet;
 		numberSet = value != null ? ++numberSet : numberSet;
@@ -23,6 +23,6 @@ public abstract class VelocityBuilderLoader {
 
 		ContextLocation location = source != null ? new ContextLocation(source) : null;
 		log.debug("Loaded velocity builder");
-		return new VelocityBuilder(new ValueSource(location, value));
+		return new VelocityBuilder(new ValueSource(location, value), allContexts);
 	}
 }
