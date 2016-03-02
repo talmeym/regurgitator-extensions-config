@@ -7,13 +7,14 @@ import java.util.*;
 public class NamespaceLoader {
 	public static Map<String, String> loadNamespaces(String string, Log log) {
 		Map<String, String> namespaceMap = new HashMap<String,  String>();
-		String[] parts = string.split(",");
 
-		for(String part: parts) {
-			String prefix = part.substring(0, part.indexOf("="));
-			String uri = part.substring(part.indexOf("=") + 1);
-			namespaceMap.put(prefix, uri);
-			log.debug("Loaded namespace '" + prefix + "=" + uri + "'");
+		if(string != null) {
+			for(String part: string.split(",")) {
+				String prefix = part.substring(0, part.indexOf("="));
+				String uri = part.substring(part.indexOf("=") + 1);
+				namespaceMap.put(prefix, uri);
+				log.debug("Loaded namespace '" + prefix + "=" + uri + "'");
+			}
 		}
 
 		log.debug("Loaded " + namespaceMap.size() + " namespaces");
