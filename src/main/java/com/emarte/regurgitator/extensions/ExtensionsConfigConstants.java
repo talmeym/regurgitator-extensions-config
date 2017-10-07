@@ -1,11 +1,15 @@
+/*
+ * Copyright (C) 2017 Miles Talmey.
+ * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */
 package com.emarte.regurgitator.extensions;
 
 public interface ExtensionsConfigConstants {
-	public static final String XPATH = "xpath";
-	public static final String NAMESPACE = "namespace";
-	public static final String NAMESPACES = "namespaces";
-	public static final String NAMESPACE_PREFIX = "prefix";
-	public static final String NAMESPACE_URI = "uri";
-	public static final String JSONPATH = "json-path";
-	public static final String ALL_CONTEXTS = "all-contexts";
+    String XPATH = "xpath";
+    String NAMESPACE = "namespace";
+    String NAMESPACES = "namespaces";
+    String NAMESPACE_PREFIX = "prefix";
+    String NAMESPACE_URI = "uri";
+    String JSONPATH = "json-path";
+    String ALL_CONTEXTS = "all-contexts";
 }
