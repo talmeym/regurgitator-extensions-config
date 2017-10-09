@@ -31,7 +31,7 @@ abstract class XmlParameterLoader {
 
         ContextLocation location = source != null ? new ContextLocation(source) : null;
 
-        log.debug("Loaded xml parameter '" + id + "'");
+        log.debug("Loaded xml parameter '{}'", id);
         return new XmlParameter(id, prototype, context, new ValueSource(location, value), xpathProcessor, processor);
     }
 }

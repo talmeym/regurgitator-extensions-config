@@ -17,11 +17,11 @@ class NamespaceLoader {
                 String prefix = part.substring(0, part.indexOf("="));
                 String uri = part.substring(part.indexOf("=") + 1);
                 namespaceMap.put(prefix, uri);
-                log.debug("Loaded namespace '" + prefix + "=" + uri + "'");
+                log.debug("Loaded namespace '{}={}'", prefix, uri);
             }
         }
 
-        log.debug("Loaded " + namespaceMap.size() + " namespaces");
+        log.debug("Loaded {} namespaces", namespaceMap.size());
         return namespaceMap;
     }
 }

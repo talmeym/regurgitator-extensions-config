@@ -31,7 +31,7 @@ abstract class JsonParameterLoader {
 
         ContextLocation location = source != null ? new ContextLocation(source) : null;
 
-        log.debug("Loaded json parameter '" + id + "'");
+        log.debug("Loaded json parameter '{}'", id);
         return new JsonParameter(id, prototype, context, new ValueSource(location, value), new JsonPathProcessor(jsonPath), processor);
     }
 }
