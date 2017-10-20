@@ -6,6 +6,9 @@ package com.emarte.regurgitator.extensions;
 
 import com.emarte.regurgitator.core.*;
 
+import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
+import static com.emarte.regurgitator.core.FileUtil.streamToString;
+
 abstract class JsonParameterLoader {
     Step buildJsonParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, ValueProcessor processor, String jsonPath, Log log) throws RegurgitatorException {
         int numberSet = 0;
@@ -23,7 +26,7 @@ abstract class JsonParameterLoader {
 
         if(file != null) {
             try {
-                value = FileUtil.streamToString(FileUtil.getInputStreamForFile(file));
+                value = streamToString(getInputStreamForFile(file));
             } catch (Exception e) {
                 throw new RegurgitatorException("Error loading file: " + file, e);
             }
