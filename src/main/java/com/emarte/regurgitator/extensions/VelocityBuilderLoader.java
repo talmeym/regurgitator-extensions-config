@@ -6,6 +6,8 @@ package com.emarte.regurgitator.extensions;
 
 import com.emarte.regurgitator.core.*;
 
+import java.io.IOException;
+
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static com.emarte.regurgitator.core.FileUtil.streamToString;
 
@@ -23,7 +25,7 @@ abstract class VelocityBuilderLoader {
         if(file != null) {
             try {
                 value = streamToString(getInputStreamForFile(file));
-            } catch (Exception e) {
+            } catch (IOException e) {
                 throw new RegurgitatorException("Error loading file: " + file, e);
             }
         }
