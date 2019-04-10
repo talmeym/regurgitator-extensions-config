@@ -6,11 +6,13 @@ package com.emarte.regurgitator.extensions;
 
 import com.emarte.regurgitator.core.*;
 
+import java.util.List;
+
 import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
 import static com.emarte.regurgitator.core.FileUtil.streamToString;
 
 abstract class XmlParameterLoader {
-    Step buildXmlParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, ValueProcessor processor, XpathProcessor xpathProcessor, Log log) throws RegurgitatorException {
+    Step buildXmlParameter(String id, ParameterPrototype prototype, String context, String source, String value, String file, List<ValueProcessor> processors, XpathProcessor xpathProcessor, Log log) throws RegurgitatorException {
         int numberSet = 0;
         numberSet = source != null ? ++numberSet : numberSet;
         numberSet = value != null ? ++numberSet : numberSet;
@@ -35,6 +37,6 @@ abstract class XmlParameterLoader {
         ContextLocation location = source != null ? new ContextLocation(source) : null;
 
         log.debug("Loaded xml parameter '{}'", id);
-        return new XmlParameter(id, prototype, context, new ValueSource(location, value), xpathProcessor, processor);
+        return new XmlParameter(id, prototype, context, new ValueSource(location, value), xpathProcessor, processors);
     }
 }
