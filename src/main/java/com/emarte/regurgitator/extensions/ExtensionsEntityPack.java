@@ -12,5 +12,7 @@ public class ExtensionsEntityPack extends AbstractEntityPack {
     public ExtensionsEntityPack() {
         addConditionBehaviour("contains-json-path", new ContainsJsonPathBehaviour());
         addConditionBehaviour("contains-xpath", new ContainsXpath(new HashMap<String, String>()));
+
+        addValueProcessor("json-print-processor", new JsonPrintProcessor());
     }
 }
