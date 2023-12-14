@@ -11,8 +11,7 @@ import java.util.HashMap;
 public class ExtensionsEntityPack extends AbstractEntityPack {
     public ExtensionsEntityPack() {
         addConditionBehaviour("contains-json-path", new ContainsJsonPathBehaviour());
-        addConditionBehaviour("contains-xpath", new ContainsXpath(new HashMap<String, String>()));
-
+        addConditionBehaviour("contains-xpath", new ContainsXpath(new HashMap<>()));
         addValueProcessor("json-print-processor", new JsonPrintProcessor());
     }
 }
