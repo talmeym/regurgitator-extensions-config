@@ -2,14 +2,14 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.extensions;
+package uk.emarte.regurgitator.extensions;
 
-import com.emarte.regurgitator.core.*;
+import uk.emarte.regurgitator.core.*;
 
 import java.io.IOException;
 
-import static com.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
-import static com.emarte.regurgitator.core.FileUtil.streamToString;
+import static uk.emarte.regurgitator.core.FileUtil.getInputStreamForFile;
+import static uk.emarte.regurgitator.core.FileUtil.streamToString;
 
 abstract class FreemarkerBuilderLoader {
     ValueBuilder buildFreemarkerValueBuilder(String source, String value, String file, boolean allContexts, Log log) throws RegurgitatorException {
