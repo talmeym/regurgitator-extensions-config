@@ -2,9 +2,9 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.extensions;
+package uk.emarte.regurgitator.extensions;
 
-import com.emarte.regurgitator.core.Log;
+import uk.emarte.regurgitator.core.Log;
 
 import java.util.HashMap;
 import java.util.Map;
