@@ -11,7 +11,7 @@ import java.util.Map;
 
 class NamespaceLoader {
     static Map<String, String> loadNamespaces(String string, Log log) {
-        Map<String, String> namespaceMap = new HashMap<String,  String>();
+        Map<String, String> namespaceMap = new HashMap<>();
 
         if(string != null) {
             for(String part: string.split(",")) {
