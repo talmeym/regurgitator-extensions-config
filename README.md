@@ -6,4 +6,4 @@ start your reading here: [regurgitator-all](https://talmeym.github.io/regurgitat
 
 ---
 
-api docs: [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-config/0.1.3/){:target="_blank"} [``0.1.2``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-config/0.1.2/){:target="_blank"}
+api docs: [``0.1.4``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-config/0.1.4/){:target="_blank"} [``0.1.3``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-config/0.1.3/){:target="_blank"} [``0.1.2``](https://regurgitator.emarte.uk/apidocs/regurgitator-extensions-config/0.1.2/){:target="_blank"}
